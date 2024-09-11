@@ -8,7 +8,7 @@ class Post(models.Model):
     user=models.ForeignKey(User, on_delete=models.CASCADE)
     title=models.CharField(max_length=255, blank=False, null=False)
     content=models.TextField(blank=False, null=False)
-    is_published=models.BooleanField(default=False)
+    is_published=models.BooleanField(default=True)
     created_at=models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
